@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_banking
+    description: "Raw data ingested from S3 landing zone via Snowpipe"
+    database: BANKING_PROJECT_DB
+    schema: RAW
+    tables:
+      - name: raw_transactions
+        description: "Structured CSV core banking transactions"
+      - name: raw_cc_events
+        description: "Semi-structured JSON credit card telemetry"
+      - name: raw_insurance_claims
+        description: "Semi-structured XML insurance claims"
+      - name: raw_mobile_telemetry
+        description: "Semi-structured Parquet mobile app clicks"
+      - name: raw_kyc_vendor
+        description: "Semi-structured Avro KYC vendor payloads"
